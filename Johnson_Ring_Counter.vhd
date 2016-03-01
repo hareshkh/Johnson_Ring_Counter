@@ -1,0 +1,35 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Johnson_Ring_Counter is
+port ( 
+        OUTPUT : out std_logic_vector(3 downto 0);
+        CLEAR : in std_logic;
+        CLOCK : in std_logic
+        );
+end Johnson_Ring_Counter;
+
+architecture Logic of Johnson_Ring_Counter is
+
+signal temp : std_logic_vector(3 downto 0):=(others => '0');
+
+begin
+
+OUTPUT <= std_logic_vector(temp);
+
+process(CLOCK)
+begin
+    if( rising_edge(CLOCK) ) then
+        if (CLEAR = '1') then
+            temp <= (others => '0');
+        else
+            temp(1) <= temp(0);
+            temp(2) <= temp(1);
+            temp(3) <= temp(2);
+            temp(0) <= not temp(3);
+        end if;
+    end if;
+end process;
+    
+end Logic;

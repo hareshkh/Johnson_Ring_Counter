@@ -1,0 +1,10 @@
+Fitter Status : Successful - Tue Mar 01 14:31:03 2016
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : Johnson_Ring_Counter
+Top-level Entity Name : Johnson_Ring_Counter
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 4 / 3,744 ( < 1 % )
+Total pins : 6 / 189 ( 3 % )
+Total memory bits : 0 / 18,432 ( 0 % )
